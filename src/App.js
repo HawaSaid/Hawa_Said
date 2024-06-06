@@ -13,9 +13,6 @@ function App() {
     <Router>
       <div className='App'>
         <Routes>
-          <Route path="/LetsConnect" element={
-          <Contact />
-          } />
           <Route path="/" element={
             <>
               <NavBar />
@@ -23,6 +20,7 @@ function App() {
               <br/>
               <Skills />
               <Projects />
+              <Contact />
               <Footer />
             </>
           }/>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { HashLink } from 'react-router-hash-link';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -7,7 +8,6 @@ import nav1icon from "../assets/img/linkedin.svg";
 import nav2icon from "../assets/img/github.svg";
 import nav3icon from "../assets/img/envelope.svg";
 import { useNavigate } from 'react-router-dom';
-
 
 
 export const NavBar = () => {
@@ -32,10 +32,6 @@ export const NavBar = () => {
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   }
-  const onclickletsconnect =()=>{
-    navigate('/LetsConnect');
-
-  }
 
   return (
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
@@ -58,7 +54,9 @@ export const NavBar = () => {
               <a href="https://github.com/HawaSaid"><img src={nav2icon} alt="" /></a>
               <a href="mailto:hawaAfnane.engineer@gmail.com"><img src={nav3icon} alt="" /></a>
             </div>
-              <button className="vvd" onClick={onclickletsconnect}><span>Let's Connect</span></button>
+              <HashLink to='#connect'>
+                <button className="vvd"><span>Let’s Connect</span></button>
+              </HashLink>
           </span>
 
         </Navbar.Collapse>

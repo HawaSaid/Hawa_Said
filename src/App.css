@@ -512,7 +512,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /* Contact Form CSS*/
 .contact {
   background-repeat: no-repeat;
-  background: linear-gradient(90.21deg, rgb(243,157,216) -5.91%, #ffffff 111.58%);
   padding: 60px 0 200px 0;
 }
 .contact img {
@@ -589,7 +588,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-repeat: no-repeat;
 }
 .footer p{
-  font-weight: 400;
+  font-weight: 600;
   font-size: 12px;
   letter-spacing: 0.5px;
   margin-top: 20px;

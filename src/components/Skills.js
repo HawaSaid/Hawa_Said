@@ -36,9 +36,6 @@ export const Skills = () => {
                 Skills
               </h2>
               <p> Here are the skills I acquired during the projects I worked on</p>
-              <h3>
-                1. Web Development
-              </h3>
               <br />
               <Carousel responsive={responsive} infinite={true} className="skills-slider">
                 <div className="item">
@@ -61,14 +58,6 @@ export const Skills = () => {
                   <img src={meter1} alt="Image" />
                   <h5> <span> Bootstrap </span> </h5>
                 </div>
-              </Carousel>
-              <br/>
-              <br/>
-              <h3>
-                2. Object Oriented Programming
-              </h3>
-              <br />
-              <Carousel responsive={responsive} infinite={true} className="skills-slider">
                 <div className="item">
                   <img src={meter1} alt="Image" />
                   <h5><span> Java </span></h5>

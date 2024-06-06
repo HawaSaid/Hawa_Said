@@ -1,7 +1,7 @@
 import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
 import projImg1 from "../assets/img/Pet_Adoption_Website.png";
 import projImg2 from "../assets/img/Real_Estate_System.png";
-import projImg3 from "../assets/img/project-img3.png";
+import projImg3 from "../assets/img/c-project.png";
 import ProjectCards from "../components/ProjectCards";
 
 export const Projects = () => {
@@ -17,7 +17,7 @@ export const Projects = () => {
             imgUrl: projImg2,
           },
           {
-            title: "Business Startup",
+            title: "Movie Recommendation System",
             description: "Design & Development",
             imgUrl: projImg3,
           },

@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Container } from "react-bootstrap";
 import { Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact.svg";
-import NavBar from "../components/NavBar";
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -36,7 +35,7 @@ export const Contact = () => {
     });
 
     setButtonText("Send");
-    let result = await response.json();
+    let result = response.json();
     setFormDetails(formInitialDetails);
 
     if (result.success === 200) {
@@ -51,17 +50,10 @@ export const Contact = () => {
 
   return (
     <section className="contact" id="connect">
-      <NavBar/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
       <Container>
         <Row className="align-items-center">
           <Col md={6}>
-            <h2>Let's Connect</h2>
+            <h2>Let's Connect!</h2>
             <form onSubmit={handleSubmit}>
               <Row>
                 <Col sm={6} className="px-1">
@@ -123,7 +115,6 @@ export const Contact = () => {
                     </p>
                   </Col>
                 )}
-                
               </Row>
             </form>
           </Col>
