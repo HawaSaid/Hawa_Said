@@ -86,7 +86,7 @@ export const Skills = () => {
                   <img src={meter10} alt="Image" />
                   <h5><span> Node.js </span> </h5>
                 </div>
-                <div className="item10">
+                <div className="item11">
                   <img src={meter4} alt="Image" />
                   <h5><span> MySQL </span> </h5>
                 </div>

@@ -232,8 +232,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
 .logo{
-  width:150px;
-  height:150px;
+  width:125px;
+  height:125px;
   text-align: left;
   margin-top:20px;
 }
@@ -411,12 +411,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: 200px;
 }
 .item9 img{
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
+  margin-top: 30px;
 }
 .item10 img{
-  width: 300px;
+  width: 310px;
   height: 130px;
+  margin-top: 50px;
+}
+.item11 img{
+  width: 300px;
+  height: 150px;
   margin-top: 50px;
 }
 /* Projects CSS*/
