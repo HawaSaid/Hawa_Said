@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Container } from "react-bootstrap";
-import { Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact.svg";
 
 export const Contact = () => {
@@ -8,12 +7,13 @@ export const Contact = () => {
     firstName: "",
     lastName: "",
     email: "",
-    phone: "",
+    linkedin: "",
     message: "",
   };
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState("Send");
   const [status, setStatus] = useState({});
+  const [error, SetError] = useState('');
 
   const onFormUpdate = (category, value) => {
     setFormDetails({
@@ -25,26 +25,31 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-
-    setButtonText("Send");
-    let result = response.json();
-    setFormDetails(formInitialDetails);
-
-    if (result.success === 200) {
-      setStatus({ success: true, message: "Message sent successfully" });
-    } else {
-      setStatus({
-        success: false,
-        message: "Something went wrong, please try again later.",
+    try {
+      const response = await fetch("http://localhost:3500/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formDetails),
       });
+  
+      console.log("Server status:", response.status);
+      if (!response.ok) {
+       console.log('Message not sent');
+       if(response.status===400){
+        console.log("All the fields are not filled");
+       }
+      }
+
+      if(response.ok){
+        setButtonText("Sent");
+        setFormDetails(formInitialDetails);
+        setStatus({ success: true, message: "Message sent successfully" });
+      }
+
+    } catch (error) {
+      SetError('Error connecting to server');
     }
   };
 
@@ -87,34 +92,23 @@ export const Contact = () => {
                 <Col sm={6} className="px-1">
                   <input
                     type="tel"
-                    value={formDetails.phone}
-                    placeholder="Phone"
-                    onChange={(e) => onFormUpdate("phone", e.target.value)}
+                    value={formDetails.linkedin}
+                    placeholder="LinkedIn"
+                    onChange={(e) => onFormUpdate("linkedin", e.target.value)}
                   />
                 </Col>
                 <Col>
                   <textarea
-                    row="6"
+                    rows="6"
                     value={formDetails.message}
                     placeholder="Message"
                     onChange={(e) => onFormUpdate("message", e.target.value)}
                   />
                   <button type="submit">
                     <span>{buttonText}</span>
+                    {error && <p id="error">{error}</p>}
                   </button>
                 </Col>
-                {status.message && (
-                  <Col>
-                    <p
-                      className={
-                        status.success === false ? "danger" : "success"
-                      }
-                    >
-                      {" "}
-                      {status.message}
-                    </p>
-                  </Col>
-                )}
               </Row>
             </form>
           </Col>
@@ -126,4 +120,4 @@ export const Contact = () => {
     </section>
   );
 };
-export default Contact
+export default Contact;
