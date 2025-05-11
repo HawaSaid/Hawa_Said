@@ -426,6 +426,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: 150px;
   margin-top: 50px;
 }
+.item12 img{
+  width: 150px;
+  height: 150px;
+  margin-top: 50px;
+}
+.item13 img{
+  width: 210px;
+  height: 210px;
+  margin-top: 0px;
+}
 /* Projects CSS*/
 .project {
   padding: 80px 0;
