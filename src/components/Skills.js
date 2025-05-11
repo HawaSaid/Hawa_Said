@@ -43,51 +43,51 @@ export const Skills = () => {
               <h2>
                 Skills
               </h2>
-              <p>Welcome to the Skills section of my portfolio! <br/>Over the past two years, I've cultivated a diverse set of skills through various projects and coursework.</p>
+              <p>Welcome to the Skills section of my portfolio! <br/>Over the past three years, I've cultivated a diverse set of skills through various projects and coursework.</p>
               <br />
               <Carousel responsive={responsive} infinite={true} className="skills-slider">
                 <div className="item1">
-                  <img src={meter1} alt="Image" />
+                  <img src={meter1} alt="HTML" />
                   <h5><span>HTML</span></h5>
                 </div>
                 <div className="item2">
-                  <img src={meter2} alt="Image" />
+                  <img src={meter2} alt="CSS" />
                   <h5><span> CSS </span> </h5>
                 </div>
                 <div className="item3">
-                  <img src={meter3} alt="Image" />
+                  <img src={meter3} alt="JavaScript" />
                   <h5> <span>JavaScript</span> </h5>
                 </div>
                 <div className="item4">
-                  <img src={meter11} alt="Image" />
+                  <img src={meter11} alt="React.js" />
                   <h5> <span> React.js</span> </h5>
                 </div>
                 <div className="item5">
-                  <img src={meter7} alt="Image" />
+                  <img src={meter7} alt="Bootstrap" />
                   <h5> <span> Bootstrap </span> </h5>
                 </div>
                 <div className="item6">
-                  <img src={meter9} alt="Image" />
+                  <img src={meter9} alt="Java" />
                   <h5><span> Java </span></h5>
                 </div>
                 <div className="item7">
-                  <img src={meter8} alt="Image" />
+                  <img src={meter8} alt="Python" />
                   <h5><span> Python </span> </h5>
                 </div>
                 <div className="item8">
-                  <img src={meter5} alt="Image" />
+                  <img src={meter5} alt="C" />
                   <h5><span> C </span> </h5>
                 </div>
                 <div className="item9">
-                  <img src={meter6} alt="Image" />
+                  <img src={meter6} alt="C++" />
                   <h5><span> C++ </span> </h5>
                 </div>
                 <div className="item10">
-                  <img src={meter10} alt="Image" />
+                  <img src={meter10} alt="Node.js" />
                   <h5><span> Node.js </span> </h5>
                 </div>
                 <div className="item11">
-                  <img src={meter4} alt="Image" />
+                  <img src={meter4} alt="MySQL" />
                   <h5><span> MySQL </span> </h5>
                 </div>
               </Carousel>

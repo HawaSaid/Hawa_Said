@@ -8,7 +8,7 @@ import TrackVisibility from "react-on-screen";
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Web Developer", "Systems Engineer","Mobile Developer", "Game Developer"];
+  const toRotate = ["Frontend Developer", "Full Stack Developer","UI/UX Designer"];
   const [text, setText] = useState("");
   const [cursorVisible, setCursorVisible] = useState(true);
   const [delta, setDelta] = useState(300 - Math.random() * 100);
@@ -46,10 +46,10 @@ export const Banner = () => {
     }
   };
   const downloadCV = () => {
-    const path = process.env.PUBLIC_URL + '/Hawa_Afnane_Said_resume1.pdf';
+    const path = process.env.PUBLIC_URL + '/Hawa_Afnane_Said_resume.pdf';
     const link = document.createElement('a');
     link.href = path;
-    link.download = 'hawa_afnane_said_cv.pdf';
+    link.download = 'Hawa_Afnane_Said_resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -65,9 +65,8 @@ export const Banner = () => {
             <div className={isVisible ? "animated_animated animate_fadeIn":""}>
             <h1>{`Hi! I'm Hawa`}<span className="wrap"> , an Aspiring {text}</span></h1>
             <p>
-              Hi! I'm a second-year Software Engineering
-              Student at Concordia University who loves to game and code in her
-              free time.
+              Hi! I'm a third-year Software Engineering
+              Student at Concordia University who loves to draw, game and make pretty websites! 
             </p>
             <div className="d-flex">
               <button className="CV" onClick={downloadCV}>

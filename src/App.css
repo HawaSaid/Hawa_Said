@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 /************ Custom Font ************/
 @font-face {
 	font-family: Centra;
@@ -33,7 +34,7 @@ body {
   position: relative;
   background-attachment: fixed;
   background-color: rgb(243,157,216) !important;
-  background-image: linear-gradient(to top,rgb(255, 255, 255),rgb(243,157,216))!important;
+  background-image: linear-gradient(to top,rgb(244, 228, 228),rgb(243,157,216))!important;
   color: #b55385 !important;
   font-family: 'Centra', sans-serif !important;
 }

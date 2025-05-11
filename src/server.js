@@ -21,8 +21,8 @@ const transporter = nodemailer.createTransport({
 
 app.post('/contact', (req, res) => {
     const { firstName, lastName, email, linkedin, message } = req.body;
-    if(!firstName||!lastName||!email||!linkedin||!message){
-        return res.status(400).json({message:'All the fields are not filled'});
+    if(!firstName||!lastName||!email||!message){
+        return res.status(400).json({message:'All the fields are not filled! Please fill all the fields and try again'});
     }
     const mailOptions = {
         from: email,
