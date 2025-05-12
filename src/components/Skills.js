@@ -43,7 +43,7 @@ export const Skills = () => {
               <h2>
                 Skills
               </h2>
-              <p>Welcome to the Skills section of my portfolio! <br/>Over the past three years, I've cultivated a diverse set of skills through various projects and coursework.</p>
+              <p>From building full-stack applications to designing intuitive UIs in hackathons, <br/>I've developed expertise in:</p>
               <br />
               <Carousel responsive={responsive} infinite={true} className="skills-slider">
                 <div className="item1">

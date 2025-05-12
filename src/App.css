@@ -101,12 +101,25 @@ nav.navbar a.navbar-brand {
     width: 9%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
-  font-weight: 400;
+  font-weight: 500;
   color: white !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
-  font-size: 18px;
+  font-size: 20px;
   opacity: 75%;
+}
+.navbar .me-auto {
+  margin: 0 auto; /* This centers the nav links */
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-brand {
+  margin-right: 0; /* Remove default margin */
+}
+
+.navbar .navbar-nav {
+  flex-direction: row; /* Ensure horizontal layout */
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
@@ -232,6 +245,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
+
 .logo{
   width:125px;
   height:125px;

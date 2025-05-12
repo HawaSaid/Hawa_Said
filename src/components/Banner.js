@@ -65,8 +65,8 @@ export const Banner = () => {
             <div className={isVisible ? "animated_animated animate_fadeIn":""}>
             <h1>{`Hi! I'm Hawa`}<span className="wrap"> , an Aspiring {text}</span></h1>
             <p>
-              Hi! I'm a third-year Software Engineering
-              Student at Concordia University who loves to draw, game and make pretty websites! 
+            I'm a third year Software Engineering student at Concordia University interested in frontend development and UI/UX design.
+            By day, I build intuitive apps and by night, I sketch, game, and read fantasy books.
             </p>
             <div className="d-flex">
               <button className="CV" onClick={downloadCV}>
